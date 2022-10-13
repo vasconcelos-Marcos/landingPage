@@ -58,7 +58,7 @@ p{
 .mainContent{
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 10rem var(--gap);
 }
 
 .menu{
@@ -122,16 +122,16 @@ p{
     height: 6.5rem;
 }
 
-.introContent{
+.homeContent{
     position: relative;
     top: -7rem;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
-.introText, .introImg{
+.homeText, .homeImg{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -144,7 +144,7 @@ h2{
     line-height: 1.2;
 }
 
-.introImg img{
+.homeImg img{
     max-width: 100%;
     height: auto;
 }
@@ -152,8 +152,49 @@ h2{
 .top3Content{
     max-width: 64rem;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.gridOneContent{
+    display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    height: 100vh;
-    text-align: center;
+    min-height: 100vh;
+}
+
+.gridMain{
+    margin-bottom: 1rem;
+}
+
+.gridDescription{
+    padding-bottom: 5rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: gridCounter;
+}
+
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+.grid h3::before{
+    counter-increment: gridCounter;
+    content: counter(gridCounter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -3rem;
+    left: -2rem;
+    transform:rotate(4deg);
 }
