@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input id="closeMenu" class="closeMenu" type="checkbox" aria-label="Close menu" role="button">
+    <label class="closeMenuLabel" for="closeMenu" title="close menu"></label>
     <aside class="menu whiteBG">
         <div class="mainContent menuContent">
-            <h1><a href="#home">logo</a></h1>
+            <h1 onclick="getElementById('closeMenu').checked=false;"><a href="#home">logo</a></h1>
             <nav>
-                <ul>
+                <ul onclick="getElementById('closeMenu').checked=false;">
                     <li><a href="#intro">intro</a></li>
                     <li><a href="#gridOne">grid one</a></li>
                     <li><a href="#gallery">gallery</a></li>
@@ -179,5 +181,45 @@
             </div>
         </div>
     </section>
+    <section id="contact" class="home mainBG">
+        <div class="mainContent homeContent">
+        <div class="homeText">
+            <h2>Januray brings us Firefox 85</h2>
+            <p>To wrap up January, we are proud to bring you the release of Firefox 85. In this version we are bringing you support for the :focus-visible pseudo-class in CSS and associated devtools, and the complete removal of Flash support from Firefox.</p>
+        </div>
+        <div class="homeImg">
+            <img src="./assets/imgs/jsOptimized.svg" alt="Um homem carregando a logo do CSS, uma mulher carregando a logo do HTML e outra mulher carregando a logo do JavaScript.">
+        </div>
+        <div class="contactForm">
+            <fieldset class="formGrid">
+                <legend>Contact me</legend>
+
+                <div class="formGroup">
+                    <label for="firstName">First name</label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Your name">
+                </div>
+                <div class="formGroup">
+                    <label for="lastName">Last name</label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Your last name">
+                </div>
+                <div class="formGroup">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Your e-mail">
+                </div>
+                <div class="formGroup fullWidth">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                </div>
+                <div class="formGroup">
+                    <button type="submit">Send message</button>
+                </div>
+            </fieldset>
+        </div>
+        </div>
+    </section>
+    <footer id="footer" class="footer whiteBG">
+        <p><a rel="nofollow" target="_blank" href="">Feito com ❤️ por Marcos Sérgio</a></p>
+    </footer>
+    <a class="backToTop" href="#">➤</a>
 </body>
 </html>
